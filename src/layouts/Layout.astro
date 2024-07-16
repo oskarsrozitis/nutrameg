@@ -1,0 +1,145 @@
+---
+import Disclaimer from "../components/Disclaimer.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Uncover weight loss methods for all menopause stages"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Disclaimer />
+    <Footer />
+  </body>
+</html>
+
+<style is:global lang="scss">
+  :root {
+    --primary: 68, 65, 52;
+    --secondary: 186, 213, 200;
+    --accent: 136, 58, 234;
+    --text-primary: rgba(68, 65, 52, 1);
+    --text-secondary: rgba(64, 64, 64, 1);
+  }
+  html {
+    font-family: "Josefin Sans", sans-serif;
+    background: linear-gradient(#e2e9e5, #ececec);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Young Serif";
+    color: var(--text-primary);
+  }
+  h1 {
+    font-size: 2.6em;
+  }
+  h2 {
+    font-size: 2.2em;
+  }
+  h3 {
+    font-size: 1.8em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  h5 {
+    font-size: 1.1em;
+  }
+  ul.primary li {
+    background: #bad5c8;
+    padding: 18px, 16px, 18px, 16px;
+    border: 1px solid #bad5c8;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    color: #444134;
+    &:hover {
+      background: #a9cbbb;
+      border-color: #a9cbbb;
+    }
+    &:active {
+      border: 1px solid #609f81;
+      background: #87b69f;
+      box-shadow: inset 0px 6px 4px 0px rgba(81, 135, 109, 0.5);
+    }
+  }
+  ul.primary {
+    ul li {
+      background: #ffffff;
+      border: 1px solid #dbcdb3;
+      color: #444134;
+      font-weight: normal;
+      label {
+        padding: 18px;
+        display: block; // Ensure label covers the whole li area
+      }
+
+      &:has(input:checked) {
+        background: #f8f6f1;
+      }
+
+      &:active,
+      &:hover {
+        background: #f8f6f1;
+        border: 1px solid #dbcdb3;
+        box-shadow: none;
+      }
+    }
+  }
+
+  button.primary {
+    background: #bad5c8;
+    border: 1px solid #bad5c8;
+    border-radius: 6px;
+    padding: 1em 0;
+    width: 100%;
+    &:hover {
+      background: #a9cbbb;
+      border-color: #a9cbbb;
+    }
+    &:focus {
+      border: 1px solid #609f81;
+      background: #87b69f;
+      box-shadow: inset 0px 6px 4px 0px rgba(81, 135, 109, 0.5);
+    }
+  }
+  .modal-toggle:checked + label + .modal {
+    display: flex;
+  }
+
+  .modal-toggle:checked + label {
+    pointer-events: none;
+  }
+
+  .modal {
+    display: none;
+    background: linear-gradient(#e2e9e5, #ececec);
+  }
+</style>
