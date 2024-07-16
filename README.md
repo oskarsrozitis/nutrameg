@@ -1,12 +1,12 @@
 # Nutrameg
 
-This is the Nutrameg project built with Astro. Below are the instructions to get started with development, build the project, and preview the build.
+This is the Nutrameg project built with Astro, Tailwind and React. Below are the instructions to get started with development, build the project, and preview the build.
 
 ## Prerequisites
 
 Make sure you have the following installed:
 
-- [Node.js](https://nodejs.org/) (v14 or higher recommended)
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
 - [npm](https://www.npmjs.com/) (v6 or higher)
 
 ## Installation for dev
