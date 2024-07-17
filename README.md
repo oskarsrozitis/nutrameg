@@ -24,9 +24,13 @@ Make sure you have the following installed:
 
 3. Build project
     ```sh
-    npm run build
+    npm run dev
     ```
 
+4. Open browser http://localhost:4321
+    ```sh
+    npm run dev
+    ```
 
 
 ## Installation for build
