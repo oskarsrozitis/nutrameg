@@ -16,10 +16,8 @@ export default defineConfig({
   srcDir: "src",
   // Ensure this points to your source directory
   outDir: "./dist",
-  // Ensure this points to your output directory
   build: {
     assets: 'images',
-    // You can customize this if needed
     assetsPrefix: ''
   }
 });
