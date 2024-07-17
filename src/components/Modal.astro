@@ -25,12 +25,12 @@ const { id, label } = Astro.props;
       </h2>
     </div>
     <ul class="gap-4 primary flex flex-col">
-      <li class="flex items-center ps-5">
+      <li class="flex items-center ps-5 justify-start">
         <input
           type="checkbox"
           id={`${id}-choice1`}
           class="text-[#DBCDB3] focus:ring-[#DBCDB3] border-[#DBCDB3] peer rounded w-5 h-5"
-        /><label for={`${id}-choice1`} class="text-lg"
+        /><label for={`${id}-choice1`} class="text-lg flex grow justify-start text-start ps-0"
           >Improve how I look</label>
       </li>
       <li class="flex items-center ps-5">
@@ -38,28 +38,28 @@ const { id, label } = Astro.props;
           type="checkbox"
           id={`${id}-choice2`}
           class="text-[#DBCDB3] focus:ring-[#DBCDB3] border-[#DBCDB3] peer rounded w-5 h-5"
-        /><label for={`${id}-choice2`} class="text-lg">Become healthier</label>
+        /><label for={`${id}-choice2`} class="text-lg flex grow justify-start text-start ps-0">Become healthier</label>
       </li>
       <li class="flex items-center ps-5">
         <input
           type="checkbox"
           id={`${id}-choice3`}
           class="text-[#DBCDB3] focus:ring-[#DBCDB3] border-[#DBCDB3] peer rounded w-5 h-5"
-        /><label for={`${id}-choice3`} class="text-lg">Feel better</label>
+        /><label for={`${id}-choice3`} class="text-lg flex grow justify-start text-start ps-0">Feel better</label>
       </li>
       <li class="flex items-center ps-5">
         <input
           type="checkbox"
           id={`${id}-choice4`}
           class="text-[#DBCDB3] focus:ring-[#DBCDB3] border-[#DBCDB3] peer rounded w-5 h-5"
-        /><label for={`${id}-choice4`} class="text-lg">Boost my energy</label>
+        /><label for={`${id}-choice4`} class="text-lg flex grow justify-start text-start ps-0">Boost my energy</label>
       </li>
       <li class="flex items-center ps-5">
         <input
           type="checkbox"
           id={`${id}-choice5`}
           class="text-[#DBCDB3] focus:ring-[#DBCDB3] border-[#DBCDB3] peer rounded w-5 h-5"
-        /><label for={`${id}-choice5`} class="text-lg">Other</label>
+        /><label for={`${id}-choice5`} class="text-lg flex grow justify-start text-start ps-0">Other</label>
       </li>
     </ul>
     <button class="primary relative mt-16">Next</button>
