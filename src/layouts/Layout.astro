@@ -5,19 +5,17 @@ import Footer from "../components/Footer.astro";
 
 interface Props {
   title: string;
+  metaDescription: string;
 }
 
-const { title } = Astro.props;
+const { title, metaDescription } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Uncover weight loss methods for all menopause stages"
-    />
+    <meta name="description" content={metaDescription} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link
@@ -43,6 +41,7 @@ const { title } = Astro.props;
     --text-primary: rgba(68, 65, 52, 1);
     --text-secondary: rgba(64, 64, 64, 1);
   }
+
   html {
     font-family: "Josefin Sans", sans-serif;
     background: linear-gradient(#e2e9e5, #ececec);
@@ -72,14 +71,17 @@ const { title } = Astro.props;
   h5 {
     font-size: 1.1em;
   }
+
   ul.primary li {
     background: #bad5c8;
-    padding: 18px, 16px, 18px, 16px;
     border: 1px solid #bad5c8;
     border-radius: 6px;
     text-align: center;
     font-weight: bold;
     color: #444134;
+    transition: all 0.15s;
+    box-shadow: 0px 4px 4px 0px rgba(129, 129, 70, 0.16);
+
     &:hover {
       background: #a9cbbb;
       border-color: #a9cbbb;
@@ -90,15 +92,18 @@ const { title } = Astro.props;
       box-shadow: inset 0px 6px 4px 0px rgba(81, 135, 109, 0.5);
     }
   }
+
   ul.primary {
     ul li {
       background: #ffffff;
       border: 1px solid #dbcdb3;
       color: #444134;
       font-weight: normal;
+      box-shadow: none;
+
       label {
         padding: 18px;
-        display: block; // Ensure label covers the whole li area
+        display: block;
       }
 
       &:has(input:checked) {
@@ -130,6 +135,7 @@ const { title } = Astro.props;
       box-shadow: inset 0px 6px 4px 0px rgba(81, 135, 109, 0.5);
     }
   }
+
   .modal-toggle:checked + label + .modal {
     display: flex;
   }

@@ -1,0 +1,67 @@
+---
+// Modal.astro
+import Logo from "../components/Logo.astro";
+import ArrowPrevIcon from "../components/icons/ArrowPrevIcon.astro";
+const { id, label } = Astro.props;
+---
+
+<div class="modal hidden fixed inset-0 z-50 flex justify-center">
+  <div class="p-8 rounded-lg relative">
+    <div class="absolute end-6 top-6 lg:-left-96 lg:top-6">
+      <Logo />
+    </div>
+    <div class="flex flex-col gap-6 w-96">
+      <label
+        for={`${id}-close`}
+        class="inline-block cursor-pointer text-[#444134] py-2 z-50"
+      >
+        <ArrowPrevIcon />
+      </label>
+      <div class="w-full bg-white rounded-full h-2.5">
+        <div class="bg-[#E5BF94] h-2.5 rounded-full" style="width: 10%"></div>
+      </div>
+      <h2 class="font-serif text-2xl text-center py-4">
+        Why do you want to lose weight?
+      </h2>
+    </div>
+    <ul class="gap-4 primary flex flex-col">
+      <li class="flex items-center ps-5">
+        <input
+          type="checkbox"
+          id={`${id}-choice1`}
+          class="text-[#DBCDB3] focus:ring-[#DBCDB3] border-[#DBCDB3] peer rounded w-5 h-5"
+        /><label for={`${id}-choice1`} class="text-lg"
+          >Improve how I look</label>
+      </li>
+      <li class="flex items-center ps-5">
+        <input
+          type="checkbox"
+          id={`${id}-choice2`}
+          class="text-[#DBCDB3] focus:ring-[#DBCDB3] border-[#DBCDB3] peer rounded w-5 h-5"
+        /><label for={`${id}-choice2`} class="text-lg">Become healthier</label>
+      </li>
+      <li class="flex items-center ps-5">
+        <input
+          type="checkbox"
+          id={`${id}-choice3`}
+          class="text-[#DBCDB3] focus:ring-[#DBCDB3] border-[#DBCDB3] peer rounded w-5 h-5"
+        /><label for={`${id}-choice3`} class="text-lg">Feel better</label>
+      </li>
+      <li class="flex items-center ps-5">
+        <input
+          type="checkbox"
+          id={`${id}-choice4`}
+          class="text-[#DBCDB3] focus:ring-[#DBCDB3] border-[#DBCDB3] peer rounded w-5 h-5"
+        /><label for={`${id}-choice4`} class="text-lg">Boost my energy</label>
+      </li>
+      <li class="flex items-center ps-5">
+        <input
+          type="checkbox"
+          id={`${id}-choice5`}
+          class="text-[#DBCDB3] focus:ring-[#DBCDB3] border-[#DBCDB3] peer rounded w-5 h-5"
+        /><label for={`${id}-choice5`} class="text-lg">Other</label>
+      </li>
+    </ul>
+    <button class="primary relative mt-16">Next</button>
+  </div>
+</div>
