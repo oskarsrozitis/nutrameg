@@ -9,7 +9,7 @@ export default defineConfig({
   integrations: [react(), tailwind(), relativeLinks()],
   output: 'static',
   compressHTML: false,
-  base: './',
+  base: '/',
   // Set the correct base URL for your assets
   publicDir: "public",
   // Ensure this points to your public directory
