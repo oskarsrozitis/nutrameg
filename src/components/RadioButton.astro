@@ -5,6 +5,8 @@ import Modal from "./Modal.astro";
 
 <li class={`flex flex-col ${className}`}>
   <input type="radio" name="modal" id={id} class="hidden modal-toggle" />
-  <label for={id} class="cursor-pointer text-center mx-auto py-3 px-6 block">{label}</label>
+  <label for={id} class="cursor-pointer text-center mx-auto py-3 px-4 lg:px-6 block"
+    >{label}</label
+  >
   <Modal id={id} />
 </li>
