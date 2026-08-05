@@ -1,52 +1,92 @@
-# Nutrameg
+# Astro React Project
 
-This is the Nutrameg project built with Astro, Tailwind and React. Below are the instructions to get started with development, build the project, and preview the build.
+A web project built with **Astro**, **React**, and **Tailwind CSS**.
 
-## Prerequisites
+## Tech Stack
 
-Make sure you have the following installed:
+- [Astro](https://astro.build/)
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- TypeScript
+- npm
 
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [npm](https://www.npmjs.com/) (v6 or higher)
+## Requirements
 
-## Installation for dev
+Before starting, make sure the following are installed:
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/oskarsrozitis/nutrameg.git
-    cd nutrameg
-    ```
+- [Node.js](https://nodejs.org/) version 18 or later
+- [npm](https://www.npmjs.com/)
 
-2. Install dependencies:
-    ```sh
-    npm install
-    ```
+## Getting Started
 
-3. Build project
-    ```sh
-    npm run dev
-    ```
+Clone the repository:
 
-4. Open browser http://localhost:4321
-    ```sh
-    npm run dev
-    ```
+```sh
+git clone <repository-url>
+cd <repository-directory>
+```
 
+Install the dependencies:
 
-## Installation for build
+```sh
+npm install
+```
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/oskarsrozitis/nutrameg.git
-    cd nutrameg
-    ```
+Start the local development server:
 
-2. Install dependencies:
-    ```sh
-    npm install
-    ```
+```sh
+npm run dev
+```
 
-3. Build project
-    ```sh
-    npm run build
-    ```
+Open the project in your browser:
+
+```text
+http://localhost:4321
+```
+
+## Available Scripts
+
+### Start the development server
+
+```sh
+npm run dev
+```
+
+Starts the Astro development server with hot module replacement.
+
+### Create a production build
+
+```sh
+npm run build
+```
+
+Builds the project for production.
+
+The generated files are saved in the `dist` directory.
+
+### Preview the production build
+
+```sh
+npm run preview
+```
+
+Starts a local server using the production build.
+
+Run `npm run build` before using this command.
+
+## Production Build
+
+To install the project and create a production build:
+
+```sh
+git clone <repository-url>
+cd <repository-directory>
+npm install
+npm run build
+```
+
+To preview the generated build locally:
+
+```sh
+npm run preview
+```
